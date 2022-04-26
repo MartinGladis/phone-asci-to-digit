@@ -4,7 +4,9 @@ use App\NumericKeyboardDecoder;
 
 require __DIR__.'/vendor/autoload.php';
 
-$decoder = new NumericKeyboardDecoder('Ala ma kota a kot ma ale');
+$phase = readline("Wpisz zdanie: ");
+
+$decoder = new NumericKeyboardDecoder($phase);
 $decodedPhase = $decoder->decode();
 
 echo $decodedPhase;
